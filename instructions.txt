@@ -1,0 +1,50 @@
+Follow these instructions to set up your own social media project and host it with Heroku.
+
+Step 1) First, use a command line to cd into the main directory.
+
+Step 2) Run the command: git init
+
+Step 3) Run the command: heroku create (You may need to sign in.)
+
+Step 4) Run the command: heroku addons:create mongolab
+
+Step 5) Run the command: heroku config:set NODE_ENV=production
+
+Step 6) Run the command: heroku config:set JWT_SECRET=<YOUR SECRET> (You can use something like MkzCn37AhPx5Lz5G)
+
+Step 7) cd into the angular directory.
+
+Step 8) Add your heroku url to the angular\src\environments\environment.prod.ts file.
+
+	Note: the url should not end with a '/', like this.
+	baseUrl: 'https://glacial-gorge-53232.herokuapp.com',
+
+	Not like this!
+	baseUrl: 'https://glacial-gorge-53232.herokuapp.com/',
+
+
+Step 9) Run the command: ng build --output-path="build" --prod=true
+
+Step 10) Run the command: git add .
+
+Step 11) Run the command: git commit -m "<YOUR MESSAGE>"
+
+Step 12) Run the command: git push heroku master
+
+Step 13) Run the command: heroku open
+
+
+After running the last command your version of the project should open in your browser.  That's it!
+
+
+
+
+
+
+
+
+
+
+
+
+
